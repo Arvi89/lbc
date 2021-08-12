@@ -1,6 +1,6 @@
 module github.com/Arvi89/lbc
 
-go 1.15
+go 1.14
 
 require (
 	github.com/caarlos0/env v3.5.0+incompatible

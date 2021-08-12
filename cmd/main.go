@@ -6,9 +6,11 @@ import (
 	"github.com/Arvi89/lbc/repository"
 	"github.com/Arvi89/lbc/service"
 	"github.com/gin-gonic/gin"
+	"time"
 )
 
 func main() {
+	time.Sleep(5 * time.Second)
 	appConfig := config.NewApp()
 
 	carRepository := repository.NewCarMysqlRepository(appConfig.Db)

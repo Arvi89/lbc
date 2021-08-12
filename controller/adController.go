@@ -167,7 +167,7 @@ func (controller Ad) postCarAd(ctx *gin.Context, input adInput) {
 		Id:       ad.Id,
 		Title:    ad.Title,
 		Content:  ad.Content,
-		Category: "Auto",
+		Category: AUTO,
 		Car: &struct {
 			Brand string `json:"brand"`
 			Model string `json:"model"`
@@ -186,6 +186,16 @@ func (controller Ad) Put(ctx *gin.Context) {
 			Message string `json:"message"`
 		}{
 			Message: "bad ID",
+		})
+		return
+	}
+
+	beforeAd := controller.adService.GetAd(id)
+	if beforeAd == nil {
+		ctx.JSON(http.StatusBadRequest, struct {
+			Message string `json:"message"`
+		}{
+			Message: "This ad does not exist",
 		})
 		return
 	}
