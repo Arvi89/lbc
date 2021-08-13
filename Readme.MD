@@ -34,7 +34,7 @@ La réponse sera sous cette forme :
 }
 ````
 Pour récupérer une annonce :<br />
-`POST http://localhost:4000/ads/{ID}` <br />
+`GET http://localhost:4000/ads/{ID}` <br />
 La réponse sera de la même forme qu'au dessus, sauf si l'id n'est pas bon, dans ce cas ce sera soit une 400 soit une 404
 
 Pour éditer une annonce :<br />
