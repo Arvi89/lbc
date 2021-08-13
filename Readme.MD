@@ -48,3 +48,5 @@ Une 204 sera renvoyée en cas de succès, sinon une 400 ou 404.
 Notes pour amélioration : les requêtes peuvent sembler moyennement performantes, mais avec la structure des repository, il est facile d'ajouter une couche de cache et ainsi non seulement améliorer les performances, mais aussi moins surcharger la db.
 
 J'ajouterais aussi le verbe PATCH pour un edit plus facile, une meilleure gestion des erreurs par endroits et des tests plus poussés pour chercher à cerner plus de corner cases.
+
+Aussi, pour la base de données, j'ai mis une référence directement dans les annonces, c'est plus par facilité ici, pour un vrai projet je n'aurais sûrement pas fait comme ça, avec des tables de jointure pour chaque type d'annonce?
